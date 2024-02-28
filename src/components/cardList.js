@@ -1,13 +1,14 @@
-import Card from "./card.js"; 
+import Cardsss from "./card";
+import { useEffect } from "react";
+import { useState } from "react";       
         
+        // "https://65b4f8bd41db5efd28672348.mockapi.io/cart
         
-        
-        
-        const cardList=()=>{
+        const CardList=()=>{
             const [cardList,setCardList]=useState([])
-
+                console.log(cardList)
             const getCard=()=>{
-                fetch("https://65b4f8bd41db5efd28672348.mockapi.io/cart")
+                fetch("https://655b7db6ab37729791a9329c.mockapi.io/usercrud")
                 .then((data)=>data.json())     
                 .then((res)=>setCardList(res))
             }
@@ -18,15 +19,17 @@ import Card from "./card.js";
 
             return(
             <>
+            <div className="App">
             {
                 cardList.map((element,index)=>{
-                    return <Card {...element} key={index} />
+                    console.log(element.id)
+                    return <Cardsss  element={element} key={index}/>
                 })
             
             }
-                  
+            </div>      
             </>
             )
         }
 
-export default cardList;        
+export default CardList;        

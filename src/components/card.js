@@ -1,28 +1,27 @@
-import Rating from "./rating";
+// import Rating from "./rating";
+// import App from '../App.css'
 
 
-
-        const Card  =({name,price,disabled})=>{
+        const Cardsss  =({name,price})=>{
             return(
             <>
-               <div className="col-6 col-md-4 col-lg-3 p-3">
-          <div className="cborder mb-5 text-center pb-4">
-          <div className="img" style={{ height: 150 }}>450 X300</div>
-            <h2>{name}</h2>
-            <h3><Rating></Rating></h3>
-            <h4>{price}</h4>
-            
-            <button className="btn-danger" 
+              <div>
+              
+              <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap"/>
+  <div class="card-body">
+    <h5 class="card-title">{name}</h5>
+    <p class="card-text">{price}.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+                
+              </div> 
                
-             >
-            <span>
-                {disabled}
-              </span>
-            </button>
-          </div>
-                </div>
+               
+               
             </>
         )
         }
 
-export default Card;        
+export default Cardsss;        
